@@ -6,10 +6,14 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath=eisel98/p4mlapp
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login --username eisel98
+docker tag p4mlapp $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker image push $dockerpath
